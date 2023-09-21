@@ -32,3 +32,6 @@ jobs:
       NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
     with:
       number-of-agents: 2
+      install-commands: |
+        pnpm install --frozen-lockfile
+        pnpm exec cypress install
